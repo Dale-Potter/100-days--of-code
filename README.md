@@ -7,3 +7,8 @@ Only time scripting for daily projects will be included, no time completing onli
 The aim of the 100 days is to become a better and more effiecent python developer.
 
 Source of inspiration http://100daysofcode.com/
+
+Useful links:
+
+https://www.freecodecamp.org/
+https://github.com/pybites
