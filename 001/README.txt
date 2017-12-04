@@ -2,17 +2,18 @@ Text Manipulator
 
 Script will take in raw text copied from another location and then turn it into useable data.
 
-An example would be xml formatted data into either a readable string or excel file. Used a similar script in work for a test sequence file.
+An example would be test sequences which need to be manually altered. Created a similar script in work, this will be a complete script with many options.
 
-prompt
-input
-		What needs doing?
-		the input data/text
-		
-Manipulation of data/text
-		split/replace
-		
-Output
-		text file
-		excel file
-		
+Current verison
+----------------
+
+User can replace specific characters in a large string
+User can replace specific characters with other characters
+Output is given with comparison of old and new data
+
+Possible improvements
+----------------------
+
+Add in choiceto export as excel file or text file
+Import pandas to allow manipulation of dataframes
+Add in a user interface
