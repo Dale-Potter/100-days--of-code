@@ -2,3 +2,4 @@
 2017-12-05 22:32:07 2 30 TEST COMMENT TEST LEARNT
 2017-12-05 22:33:20 5 95  TEST COMMENT 2 TEST LEARNT 2
 2017-12-05 22:33:38 4 67 TEST COMMENT 3 TEST LEARNT 3
+2017-12-05 22:43:06 1 20 Worked on this script, day 2/100 coding. datetime module, opening and appending to files
