@@ -27,5 +27,5 @@ day = date()
 	
 
 storage = open('CodeCounterStorage.txt','a+')
-storage.write( day + ' ' +  hour + ' ' + min + ' ' + comment + ' ' + learnt + '\n')
+storage.write( day + ',' +  hour + ',' + min + ',' + comment + ' ' + learnt + '\n')
 storage.close()
