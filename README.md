@@ -12,3 +12,10 @@ Useful links:
 
 https://www.freecodecamp.org/
 https://github.com/pybites
+
+001 - TextManipulator, a little tool sometimes used in work to modify large pieces of text
+002 - CodeCounter, a script to count the amount of time spent coding
+003 - Visual Counter, a small jupyter notebook to show the data from CodeCounter visually
+004 - WebScaperTrading, a web scraper to get the latest news of cryto currency
+005 - FormattedTradingNews, script to rearrange and remove characters of web scraped data
+006 - EmailingTradingNews, script to email the data from 004 & 005 to my email
