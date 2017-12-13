@@ -19,3 +19,5 @@ https://github.com/pybites
 004 - WebScaperTrading, a web scraper to get the latest news of cryto currency
 005 - FormattedTradingNews, script to rearrange and remove characters of web scraped data
 006 - EmailingTradingNews, script to email the data from 004 & 005 to my email
+007 - Combination of the past 3 scripts in one working script
+008 - HydraulicDiameter calculator, my first introduction to tkinter
