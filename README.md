@@ -21,3 +21,4 @@ https://github.com/pybites
 006 - EmailingTradingNews, script to email the data from 004 & 005 to my email
 007 - Combination of the past 3 scripts in one working script
 008 - HydraulicDiameter calculator, my first introduction to tkinter
+009 - DiceSim
