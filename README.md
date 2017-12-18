@@ -22,3 +22,4 @@ https://github.com/pybites
 007 - Combination of the past 3 scripts in one working script
 008 - HydraulicDiameter calculator, my first introduction to tkinter
 009 - DiceSim
+010 - DiceSimV2
