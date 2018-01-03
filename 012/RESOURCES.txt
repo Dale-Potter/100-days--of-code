@@ -1,0 +1,6 @@
+Resources
+
+https://pythonadventures.wordpress.com/2013/08/06/apscheduler-examples/
+https://apscheduler.readthedocs.io/en/latest/userguide.html
+https://devcenter.heroku.com/categories/python
+https://github.com/agronholm/apscheduler/blob/master/examples/jobstores/zookeeper.py

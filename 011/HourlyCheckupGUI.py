@@ -16,6 +16,7 @@ class HourlyCheckupGUI:
 		self.Questios = StringVar()
 		Entry(frame, textvariable = self.Questios).grid(row = 5, columnspan = 2)
 		Button(frame, text = 'REPORT', command = root.destroy).grid(row = 6, columnspan = 2)
+
 		
 root = Tk()
 root.wm_title('Hourly Checkup')
