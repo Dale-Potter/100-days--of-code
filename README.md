@@ -23,3 +23,7 @@ https://github.com/pybites
 008 - HydraulicDiameter calculator, my first introduction to tkinter
 009 - DiceSim
 010 - DiceSimV2
+011 - Part 1, GUI using Tkinter
+012 - Part 2, Scheduler using APScheduler
+013 - Part 3, GUI merged with APScheduler
+014 - Part 4, GUI with data storage
