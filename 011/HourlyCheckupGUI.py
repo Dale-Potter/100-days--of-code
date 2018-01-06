@@ -2,7 +2,7 @@
 
 #Import modules needed for GUI
 import sys
-from tkinter import *
+from Tkinter import *
 
 #Function to create popup, currently opened with button. Will automatically pop up using scheduler
 def clickAbout():
