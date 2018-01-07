@@ -28,3 +28,4 @@ https://github.com/pybites
 013 - Part 3, GUI merged with APScheduler
 014 - Part 4, GUI with data storage
 015 - Part 5, Compiled app with a hourly pop up and data storage
+016 - Part 1, Graph plotter
