@@ -1,56 +1,43 @@
-import matplotlib as mpl
-import numpy as np
 import sys
 if sys.version_info[0] < 3:
     import Tkinter as tk
 else:
     import tkinter as tk
-import matplotlib.backends.tkagg as tkagg
-from matplotlib.backends.backend_agg import FigureCanvasAgg
+	
+import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.backends.backend_tkagg import NavigationToolbar2TkAgg
+from matplotlib.figure import Figure
 
+class grapher_gui(tk.Tk):
+    def __init__(self,parent):
+        tk.Tk.__init__(self,parent)
+        self.parent = parent
+        self.graph()
 
-def draw_figure(canvas, figure, loc=(0, 0)):
+    def graph(self):
+        x_vals = np.linspace(0, 2 * np.pi, 50)
+        y_vals = np.sin(x_vals)
+		
+        toplevel = tk.Toplevel(width=2000)
+        figure = Figure(figsize=(10,5))
+        ax = figure.add_subplot(111)
+        plot = ax.plot(x_vals, y_vals, 'k-')
+        ax.set_xlabel('Time')
+        ax.set_ylabel('Numbers')
+        ax.set_title('Title')
 
-    figure_canvas_agg = FigureCanvasAgg(figure)
-    figure_canvas_agg.draw()
-    figure_x, figure_y, figure_w, figure_h = figure.bbox.bounds
-    figure_w, figure_h = int(figure_w), int(figure_h)
-    photo = tk.PhotoImage(master=canvas, width=figure_w, height=figure_h)
+        canvas = FigureCanvasTkAgg(figure, master=toplevel)
+        canvas.show()
+        canvas.get_tk_widget().grid(row=0)            
+        toolbar = NavigationToolbar2TkAgg(canvas, toplevel)
+        toolbar.grid(row=1, sticky=tk.W) 
+        toolbar.update() 
+        toplevel.mainloop()
 
-    # Position: convert from top-left anchor to center anchor
-    canvas.create_image(loc[0] + figure_w/2, loc[1] + figure_h/2, image=photo)
-
-    # Unfortunately, there's no accessor for the pointer to the native renderer
-    tkagg.blit(photo, figure_canvas_agg.get_renderer()._renderer, colormode=2)
-
-    # Return a handle which contains a reference to the photo object
-    # which must be kept live or else the picture disappears
-    return photo
-
-# Create a canvas, make it the width and height of screen
-window = tk.Tk()
-window.title("A figure in a canvas")
-canvas = tk.Canvas(window)
-canvas.pack()
-window.geometry("{0}x{1}+0+0".format(window.winfo_screenwidth(), window.winfo_screenheight()))
-
-# Generate some example data
-X = np.linspace(0, 2 * np.pi, 50)
-Y = np.sin(X)
-
-# Create the figure we desire to add to an existing canvas
-fig = mpl.figure.Figure(figsize=(2,2))
-ax = fig.add_axes([0, 0, 1, 1])
-ax.plot(X, Y)
-
-# Keep this handle alive, or else figure will disappear
-fig_x, fig_y = 100, 100
-fig_photo = draw_figure(canvas, fig, loc=(fig_x, fig_y))
-fig_w, fig_h = fig_photo.width(), fig_photo.height()
-
-# Add more elements to the canvas, potentially on top of the figure
-canvas.create_line(200, 50, fig_x + fig_w / 2, fig_y + fig_h / 2)
-canvas.create_text(200, 50, text="Zero-crossing", anchor="s")
-
-# Let Tk take over
-tk.mainloop()
+if __name__ == "__main__":
+    app = grapher_gui(None)
+    app.title('Plotter')
+    app.mainloop()

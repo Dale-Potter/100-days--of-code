@@ -18,3 +18,4 @@ Project steps:
 Resources:
 
 https://matplotlib.org/gallery/user_interfaces/embedding_in_tk_canvas_sgskip.html
+https://stackoverflow.com/questions/29432683/resizing-a-matplotlib-plot-in-a-tkinter-toplevel
